@@ -1,0 +1,29 @@
+/* General page styling */
+
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    background-color: bisque;
+    color: antiquewhite;
+
+}
+
+/* Header styling */
+header {
+    background-color: aqua;
+    color: azure;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Section styling */
+
+section{
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: brown;
+    border-radius: 8px;
+}
+
