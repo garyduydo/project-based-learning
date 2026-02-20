@@ -4,6 +4,8 @@ const button = document.querySelector(".btn")
 
 const themeBtn = document.querySelector(".themebtn")
 
+const progressBars =document.querySelectorAll(".progress")
+
 themeBtn.addEventListener("click", function() {
     document.body.classList.toggle("dark-mode")
 
@@ -16,4 +18,9 @@ themeBtn.addEventListener("click", function() {
 
 button.addEventListener("click", function() {
     alert("Thanks for visiting my portfolio!")
+})
+
+progressBars.forEach(function(bar){
+    const targetWidth = bar.dataset.width
+    bar.style.width = targetWidth + "%"
 })
