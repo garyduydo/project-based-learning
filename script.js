@@ -6,6 +6,8 @@ const themeBtn = document.querySelector(".themebtn")
 
 const progressBars =document.querySelectorAll(".progress")
 
+const form = document.querySelector(".contact-form")
+
 themeBtn.addEventListener("click", function() {
     document.body.classList.toggle("dark-mode")
 
@@ -23,4 +25,20 @@ button.addEventListener("click", function() {
 progressBars.forEach(function(bar){
     const targetWidth = bar.dataset.width
     bar.style.width = targetWidth + "%"
+})
+
+form.addEventListener("submit", function(){
+    event.preventDefault()
+
+    const name= document.querySelector("#name").value
+    const email = document.querySelector("#email").value
+    const message= document.querySelector("#message").value
+
+    if (name===""||email===""||message===""){
+        alert("Please fill in all the fields")
+    }
+
+    alert('Thanks ${name}! Your message has been received. I will get back to you at ${email} soon!')
+
+    form.reset()
 })
