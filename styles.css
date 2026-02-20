@@ -81,3 +81,17 @@ nav a:hover{
     color: #e94560;
 }
 
+@media(max_width:600px){
+    nav a {
+        display:block;
+        margin: 10px 0;
+    }
+    
+    header{
+        padding: 60px 20px;
+    }
+
+    .my_name{
+        font-size: 2rem;
+    }
+}
