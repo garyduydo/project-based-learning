@@ -123,6 +123,30 @@ nav a:hover{
     transition: width 1s ease;
 }
 
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-input{
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus{
+    border-color: #e94560;
+}
+
+textarea{
+    height: 150px;
+    resize: vertical;
+}
+
 @media(max_width:600px){
     nav a {
         display:block;
