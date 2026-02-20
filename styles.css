@@ -11,10 +11,17 @@ body {
 
 /* Header styling */
 header {
+    background: linear-gradient(135deg, #1a1a2e, #e94560);
     background-color: aqua;
     color: azure;
     text-align: center;
-    padding: 50px 20px;
+    padding: 100px 20px;
+}
+
+header p{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    opacity: 0.8;
 }
 
 /* Section styling */
@@ -25,6 +32,11 @@ section{
     padding: 20px;
     background-color: brown;
     border-radius: 8px;
+    transition: transform 0.3 ease;
+}
+
+section:hover{
+    transform: translateY(-5px);
 }
 
 /* Name */
