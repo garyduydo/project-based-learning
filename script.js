@@ -80,4 +80,28 @@ form.addEventListener("submit", function(){
     form.reset()
 })
 
+const portfolio = {
+    name: "Gary Do",
+    skills: [
+        {name: "HTML", level: 60},
+        {name: "CSS", level: 50},
+        {name: "JavaScript", level: 10}
+    ]
+}
 
+const skillsSection =document.querySelector("#skills")
+
+portfolio.skills.forEach(function(skill){
+    skillsSection.innerHTML += `
+    <div class="skill">
+        <p>${skill.name}</p>
+        <div class="progress-bar">
+            <div class ="progress" style="width: ${skill.level}%"></div>
+        </div>
+    </div>
+`    
+})
+
+console.log(portfolio.name)
+console.log(portfolio.skills[1])
+console.log(`${portfolio.name} knows ${portfolio.skills.length} skills`)
