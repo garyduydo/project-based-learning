@@ -8,6 +8,43 @@ const progressBars =document.querySelectorAll(".progress")
 
 const form = document.querySelector(".contact-form")
 
+const typingText = document.querySelector(".typing-text")
+
+const phrases=[
+    "Aspiring Full Stack Engineer",
+    "Problem Solver",
+    "Lifelong Learner"
+]
+
+let phraseIndex=0
+let letterIndex=0
+let isDeleting=0
+
+function type(){
+    const currentPhrase = phrases[phraseIndex]
+
+    if (isDeleting){
+        typingText.textContent = currentPhrase.substring(0,letterIndex -1)
+        letterIndex--
+    } else {
+        typingText.textContent = currentPhrase.substring(0,letterIndex + 1)
+        letterIndex++
+    }
+
+    if (!isDeleting && letterIndex === currentPhrase.length){
+        isDeleting = true
+        setTimeout(type,1500)
+    } else if (isDeleting && letterIndex === 0){
+        isDeleting = false
+        phraseIndex = (phraseIndex + 1) % phrases.length
+        setTimeout(type, 500)
+    } else{
+        setTimeout(type, isDeleting ? 50 : 100)
+    }
+}
+
+type()
+
 themeBtn.addEventListener("click", function() {
     document.body.classList.toggle("dark-mode")
 
@@ -42,3 +79,5 @@ form.addEventListener("submit", function(){
 
     form.reset()
 })
+
+
